@@ -1,0 +1,6 @@
+---
+applications:
+- name: sb-rest-service
+  memory: 768M
+  instances: 2
+  random-route: true
