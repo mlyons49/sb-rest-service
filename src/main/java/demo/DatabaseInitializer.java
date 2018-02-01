@@ -17,9 +17,9 @@ public class DatabaseInitializer {
     @PostConstruct
     public void initTestData() {
 
-    	personRepository.save( createPerson("Alice", "Apple") );
-        personRepository.save( createPerson("Bob", "Banana") );
-        personRepository.save( createPerson("Carl", "Cantelope") );
+//    	personRepository.save( createPerson("Alice", "Apple") );
+//        personRepository.save( createPerson("Bob", "Banana") );
+//        personRepository.save( createPerson("Carl", "Cantelope") );
 
     }
 
