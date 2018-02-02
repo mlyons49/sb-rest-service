@@ -158,8 +158,21 @@
 					</includes>
 				</configuration>
 			</plugin>
-            
-	
+
+		    <plugin>
+		        <groupId>org.cloudfoundry</groupId>
+		        <artifactId>cf-maven-plugin</artifactId>
+		        <version>1.0.4</version>
+		        <configuration>
+	                <server>mycloudfoundry-instance</server>
+                    <target>https://api.run.pivotal.io</target>
+                    <org>MjlInc</org>
+                    <space>development</space>
+                    <appname>sb-rest-service</appname>
+                    <url>sb-rest-service-svc.cfapps.io</url>
+                    <memory>768</memory>	        
+		        </configuration>
+		    </plugin>
 	             
         </plugins>
     </build>
