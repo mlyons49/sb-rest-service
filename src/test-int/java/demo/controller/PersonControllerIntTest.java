@@ -30,7 +30,7 @@ public class PersonControllerIntTest {
 		ResponseEntity<List> response = restTemplate.getForEntity("/personcontroller/findAll", List.class);
 		
 		Assert.assertNotNull(response);
-		Assert.assertEquals(3, response.getBody().size());
+		Assert.assertTrue(3 <= response.getBody().size());
 	}
 	
 	@Test

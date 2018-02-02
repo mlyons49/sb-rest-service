@@ -18,6 +18,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
+import demo.exception.advice.ResponseCodeMapper;
 import demo.fixtures.ModelBuilder;
 import demo.model.Person;
 import demo.service.PersonService;
@@ -26,7 +27,7 @@ import demo.service.PersonService;
  * Unit tests using mockMvc to initiate calls to the PersonController, underlying services are mocked with Mockito.
  */
 @RunWith(SpringRunner.class)
-@WebMvcTest(PersonController.class)
+@WebMvcTest(PersonController.class )
 public class PersonControllerWithMockMvcTest {
 
 	@Autowired
@@ -38,6 +39,9 @@ public class PersonControllerWithMockMvcTest {
     @MockBean
     private PersonService personService;
 
+    @MockBean
+	private ResponseCodeMapper responseCodeMapper;
+    
 	@Test
 	public void testFindAll() throws Exception {
 
