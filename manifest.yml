@@ -1,6 +1,10 @@
 ---
 applications:
 - name: sb-rest-service
-  memory: 768M
+  path: target/sb-rest-service-1.0.0-SNAPSHOT.jar
+  memory: 1024M
   instances: 2
-  random-route: true
+  routes: 
+  - route: sb-rest-service-dev-svc.cfapps.io
+  services:  - mjlinc-mysql-db
+  - demo-redis

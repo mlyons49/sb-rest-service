@@ -169,8 +169,21 @@
                     <org>MjlInc</org>
                     <space>development</space>
                     <appname>sb-rest-service</appname>
-                    <url>sb-rest-service-svc.cfapps.io</url>
-                    <memory>768</memory>	        
+                    <path>target/sb-rest-service-1.0.0-SNAPSHOT.jar</path>
+                    <memory>1025</memory>
+                    <instances>2</instances>
+                    <routes>
+                    	<route>sb-rest-service-dev-svc.cfapps.io</route>
+                    </routes>
+                    <services>
+                    	<service>
+                    		<name>mjlinc-mysql-db</name>
+                    	</service>
+                    	<service>
+                    		<name>demo-redis</name>
+                    	</service>
+                    </services>
+                    
 		        </configuration>
 		    </plugin>
 	             
